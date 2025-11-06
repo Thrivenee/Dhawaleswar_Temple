@@ -1,0 +1,213 @@
+/* ============================= */
+/* Events Section Background */
+/* ============================= */
+.events-section {
+  background-image: url('../assest/image3.png'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px; /* spacing around content */
+  position: relative;
+}
+
+/* Optional overlay for better readability */
+.events-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* semi-transparent white overlay */
+  z-index: 0;
+}
+
+.events-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================= */
+/* Events List & Cards */
+/* ============================= */
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px 60px;
+}
+
+.event-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 0;
+    background: white;
+    padding: 15px;
+    width: 340px;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s 
+ease, box-shadow 0.3s 
+ease;
+  box-shadow: 0 4px 15px rgb(204, 201, 201);
+  
+}
+/* ✨ Glowing border effect */
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cover entire card */
+  padding: 2px; /* thickness of border */
+  border-radius: 12px;
+  background: linear-gradient(45deg, rgb(234, 231, 231));
+  background-size: 300% 300%;
+  animation: shine 5s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Hover lift + glow */
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(240, 85, 34, 0.3);
+}
+
+/* Image styling */
+.event-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Event title */
+.event-card h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  margin: 5px 0;
+  color: #F05522; /* Orange title */
+  transition: color 0.3s ease;
+}
+
+.event-card h2:hover {
+  color: #f6d100; /* Golden on hover */
+}
+
+/* Event text */
+.event-card p.date {
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.event-card p.date strong {
+  font-size: 1rem;
+  color: #000;
+}
+
+.event-card p {
+  margin: 3px 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Animate glowing border */
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================= */
+/* Page Heading & Intro */
+/* ============================= */
+.headerevent  {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  margin: 30px 0 15px;
+  text-align: center;
+  color: #F05522; /* Orange color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.page p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Arial', sans-serif;
+}
+/* ============================= */
+/* Responsive heading part*/
+/* ============================= */
+@media (max-width: 768px) {
+  .headerevent {
+    font-size: 1.9rem; /* smaller heading for phones */
+    margin: 20px 0 10px;
+    margin-top: 50px;
+  }
+  .page p {
+    font-size: 0.95rem; /* smaller paragraph text */
+    line-height: 1.4;
+    padding: 0 10px; /* small padding for better spacing on mobile */
+  }
+}
+/* ============================= */
+/* Responsive Design  card part */
+/* ============================= */
+@media (max-width: 768px) {
+  .events-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Smaller event card text */
+  .event-card h2 {
+    font-size: 1.2rem; /* smaller title */
+  }
+
+  .event-card p.date {
+    font-size: 0.9rem; /* smaller date */
+  }
+
+  .event-card p {
+    font-size: 0.9rem; /* smaller description */
+  }
+
+  .event-card {
+    width: 90%; /* fit phone screen width */
+    padding: 8px;
+  }
+
+  .event-image {
+    height: 150px; /* smaller image height */
+  }
+
+  /* Hero text for Events Page */
+  .events-hero .hero-content h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .events-hero .hero-content p {
+    color: #ffffff;
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.4;
+    text-align: center;
+  }
+}

@@ -1,0 +1,207 @@
+/* Gallery Section */
+.gallery-section {
+  width: 100%;              /* Full width */
+  min-height: 100vh;        /* Full screen height */
+  padding: 2rem;
+  text-align: center;
+  /*background-image: url("C:\Users\GAYATRI\OneDrive\Desktop\temple\DhabaleshwarTemple\src\assest\gallery\bg.png");*/
+  background-image: url("../assest/gallery/bg.png");
+  background-size: cover;          /* Ensures full coverage */
+ background-position: center;
+  background-repeat: no-repeat;
+  animation: bgZoom 12s infinite alternate ease-in-out, bgMove 18s linear infinite;
+}
+@keyframes bgZoom {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+@keyframes bgMove {
+  0% { background-position: center top; }
+  50% { background-position: center center; }
+  100% { background-position: top bottom; }
+}
+.gallery-section h2 {
+  font-family: 'Crimsom Text', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #F05522;
+}
+.gallery-section p {
+  font-family: 'Crimsom Text', serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #E74C3C;
+}
+
+/* Responsive Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+   margin-bottom: 1rem;
+}
+.gallery-gridd{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+   margin-bottom: 1rem;
+}
+.gallery-item img {
+   height:200px;
+   width: 100%;
+   object-fit: cover;
+   cursor: pointer;
+   transition: transform 0.3s;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px yellow;
+}
+
+/* See More Button */
+.see-more-btn  {
+  background: linear-gradient(135deg, #FFD700, #F05522);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.see-more-btn:hover {
+ background: linear-gradient(135deg, #F05522,#FFD700);
+  transform: translateY(-2px);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 15px yellow;
+}
+.close  {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Lightbox Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  transition: background 0.3s ease;
+  z-index: 1001;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Fade-in animation for gallery grid items */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-in-out forwards;
+}
+/* Apply staggered delay to each image */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+.gallery-item:nth-child(7) { animation-delay: 0.7s; }
+.gallery-item:nth-child(8) { animation-delay: 0.8s; }
+.gallery-item:nth-child(9) { animation-delay: 0.9s; }
+.gallery-item:nth-child(10) { animation-delay: 1s; }
+.gallery-item:nth-child(11) { animation-delay: 1.1s; }
+.gallery-item:nth-child(12) { animation-delay: 1.2s; }
+.gallery-item:nth-child(13) { animation-delay: 1.3s; }
+
+/* Keyframes */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% {opacity: 1;transform: translateY(0);}}
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 1rem;
+  }
+  .gallery-section h2 {
+    font-size: 1.5rem;
+  }
+  .gallery-section p {
+    font-size: 1rem;
+  }
+  .gallery-item img {
+    height: 120px;
+  }
+  .see-more-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  .nav-btn {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  
+  .gallery-item img {
+    height: 100px;
+  }
+  .gallery-section h2 {
+    font-size: 1.3rem;
+  }
+  .gallery-section p {
+    font-size: 0.9rem;
+  }
+  .see-more-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .gallery-gridd {
+ margin-left: -7px;
+  }
+}

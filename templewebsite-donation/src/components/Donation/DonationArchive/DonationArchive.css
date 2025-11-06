@@ -1,0 +1,224 @@
+
+.donation-archive-section {
+  padding: 50px 10%;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+
+.donation-archive-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.donation-archive-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+.donation-archive-breadcrumb {
+  font-size: 1rem;
+  color: #666;
+}
+.donation-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+  padding: 40px 60px; 
+  width: 94vw;
+  margin-left: 40px;
+
+}
+
+.donation-archive-grid > :nth-child(4) {
+  grid-column: 2 / 3; 
+  justify-self: center;
+}
+.donation-archive-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(228, 218, 218, 0.986);
+  border: 1px solid rgb(253, 234, 234);
+  padding: 10px; 
+  text-align: center;
+  transition: 0.3s ease;
+  height: 400px;
+  cursor: pointer;
+ 
+}
+
+
+.donation-archive-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.12);
+}
+
+.donation-archive-image {
+  width: 93%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: 180px;
+
+}
+
+
+.donation-archive-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #E74C3c;
+  margin: 10px 0;
+}
+
+
+.donation-archive-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+
+.donation-archive-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.donation-archive-raised {
+  color: #E74C3c;
+}
+.donation-archive-goal {
+  color: #444;
+}
+
+
+.donation-archive-progress-bar {
+  background: #eee;
+  border-radius: 6px;
+  height: 8px;
+  margin-bottom: 15px;
+}
+.donation-archive-progress {
+  background: #E74C3c;
+  height: 8px;
+  border-radius: 6px;
+}
+
+
+.donation-archive-btn {
+   background: linear-gradient(135deg, #FFD700, #F05522);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.donation-archive-btn:hover {
+ background: linear-gradient(135deg, #F05522,#FFD700);
+}
+.donatetop{
+    margin-top: 500px;
+}
+.donation-banner {
+  position: relative;
+  height: 300px; 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.donation-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(110, 44, 0, 0.5); 
+  z-index: 1;
+}
+
+.donation-banner-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.donation-banner-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.donation-archive-breadcrumb {
+  background: #fff;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
+  color: #333;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .donation-archive-grid {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px 60px;
+    width: 94vw;
+    margin-left: 20px;
+}
+}
+@media (max-width: 480px) {
+.donation-archive-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(228, 218, 218, 0.986);
+    border: 1px solid rgb(253, 234, 234);
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s 
+ease;
+    height: 400px;
+    cursor: pointer;
+    width: 115%;
+}
+  .donation-archive-grid {
+    display:flex;
+flex-direction: column;
+    gap: 30px;
+    padding: 40px 60px;
+    width: 100%;
+    margin-left: -20px;
+}
+}
+@media (max-width: 320px) {
+.donation-archive-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(228, 218, 218, 0.986);
+    border: 1px solid rgb(253, 234, 234);
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s 
+ease;
+    height: 400px;
+    cursor: pointer;
+    width: 130%;
+}
+   .donation-archive-grid {
+    display:flex;
+flex-direction: column;
+    gap: 30px;
+    padding: 40px 60px;
+    width: 100%;
+    margin-left: -30px;
+}
+}
+
+

@@ -1,0 +1,262 @@
+/* ============================= */
+/* Navbar Container */
+/* ============================= */
+.transparent {
+  background-color: transparent;
+}
+
+.transparent > ul > li > a:hover {
+  color: yellow;
+}
+
+.navbar ul li .active {
+  color: yellow;
+  font-weight: bold;
+}
+.fancy-letter {
+  background: linear-gradient(45deg, #aa0303, #f47728);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.colored {
+  background: linear-gradient(
+    90deg,
+    rgba(253, 190, 87, 1) 0%,
+    rgba(252, 187, 88, 1) 10%,
+    rgba(244, 119, 40, 1) 40%,
+    rgba(244, 119, 40, 1) 100%
+  );
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.logo{
+    display: flex;
+    align-items: center;
+  gap: 0;  
+}
+
+.logoImg {
+  width: 80px;   /* set your size */
+  height: 80px;
+  background-color: #FFD700;  
+  -webkit-mask: url("../assest/Trishullogo.png") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("../assest/Trishullogo.png") no-repeat center;
+  mask-size: contain;
+}
+.logoImg2 {
+  width: 80px; 
+  height: 80px;
+  background-color: #aa4303;  
+  -webkit-mask: url("../assest/Trishullogo.png") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("../assest/Trishullogo.png") no-repeat center;
+  mask-size: contain;
+}
+/* ============================= */
+/* Logo Styling */
+/* ============================= */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logoimage {
+  height: 80px;
+  width: 150px;
+  
+}
+.logoText {
+  margin-left: -20px;            /* remove any extra margin */
+  padding-left: 0;
+ background: linear-gradient(to right, #e85555, rgb(251, 92, 6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================= */
+/* Navbar Menu */
+/* ============================= */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-menu li a {
+  font-family: "Crimson Text", serif;
+  color: #FFF5E1;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 0.3s;
+}
+.navbar-menu li a:hover{
+  color: yellow;
+}
+
+.navbar a:hover {
+  color: goldenrod;
+}
+
+/* ============================= */
+/* Hamburger Icon */
+/* ============================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #FFF5E1;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media screen and (max-width: 768px) {
+.logoText {
+    margin-left: -20px;
+    padding-left: 0;
+    font-size: 18px;
+}
+}
+/* ============================= */
+/* Mobile Styles */
+/* ============================= */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.4rem 1rem;
+  }
+
+  /* ✅ Logo smaller for mobile */
+  .logo-image {
+    height: 60px; /* was 55px */
+    width: auto;
+  }
+  .logoText {
+  margin-left: -20px;            /* remove any extra margin */
+  padding-left: 0;
+ background: linear-gradient(to right, #e85555, rgb(251, 92, 6));
+  -webkit-background-clip: text;
+-webkit-text-fill-color: #cd1805;
+}
+
+  /* ✅ Show only logo + hamburger by default */
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 55vh;   /* half screen */
+    background-color: #fffaf2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* start from top */
+    padding-top: 2rem;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    overflow-y: auto;
+    z-index: 999;
+    border-radius: 0px 0px 0px 0px; /* optional for rounded top */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: white;
+  }
+
+  .navbar-menu.show {
+    transform: translateY(0);
+    background-color: #FFF5E1;
+  }
+
+  .navbar-menu li {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-menu li a {
+     font-size: 18px;
+    color: #f47728;
+    font-weight: 600;
+  }
+
+  /* ✅ Hamburger icon styling */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 10px;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 24px;
+    background-color: #e1e9ff;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ✅ Hamburger animation when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .navbar ul li .active {
+    color: #e8c403;
+    font-weight: bold;
+}
+}
+
+.transparent > ul > li > a:hover{
+  color: #e8c403;
+}
+/* ============================= */
+/* Tablet/Desktop */
+/* ============================= */
+@media screen and (min-width: 481px) {
+  .navbar-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    max-height: none;
+    
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

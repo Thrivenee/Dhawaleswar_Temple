@@ -1,0 +1,94 @@
+/* HomeGallery.css or main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+.home-gallery {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+/* HomeGallery.css or main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+.home-gallery {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+.gallery-title {
+  font-family: 'Crimsom Text', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #F05522;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+.view-more-btn {
+  background: linear-gradient(135deg, #FFD700, #F05522);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-more-btn:hover {
+ background: linear-gradient(135deg, #F05522,#FFD700);
+  transform: translateY(-2px);
+}
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .home-gallery {
+    padding: 3rem 1rem;
+  }
+
+  .gallery-title {
+    font-size: 1.8rem;
+  }
+
+  .gallery-item img {
+    height: 150px;
+  }
+
+  .view-more-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .gallery-item img {
+    height: 120px;
+  }
+
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+
+  .view-more-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,290 @@
+/* ============================= */
+/* Hero Section for About Page */
+/* ============================= */
+.about-hero {
+  background-image: url('../assest/image3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero .hero-content p {
+  color: #ffffff;  /* Only paragraph white */
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-hero .hero-content h1 {
+ color: #FFD700; /* Heading stays orange */
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* ============================= */
+/* About Section Card */
+/* ============================= */
+.about-card-section {
+  display: flex;
+  justify-content: center;
+  margin: 50px 20px;
+  background-image: url('../assest/image3.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.about-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fffdf7;
+  border: 2px solid #f6d100;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 1100px;
+  gap: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-card-img {
+  width: 320px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-card-text {
+  flex: 1;
+}
+
+.about-card .about-subtitle {
+  color: #F05522;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+   text-align: center;
+}
+
+.about-card .about-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #F05522;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.about-card h3 {
+  font-size: 20px;
+  color: #b22222;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* ============================= */
+/* Highlights Section */
+/* ============================= */
+.highlights-card-section {
+  display: flex;
+  justify-content: center;
+  margin: 60px 20px;
+  background-image: url('../assest/image3.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.highlights-card {
+  display: flex;
+  align-items: center;
+  background: #fffdf7;
+  border: 2px solid #f6d100;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 1100px;
+  gap: 25px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.highlights-card-img {
+  width: 320px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.highlights-card-text {
+  flex: 1;
+}
+
+.highlights-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #F05522;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.highlights-card-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ============================= */
+/* Specialties Section */
+/* ============================= */
+.specialties-card-section {
+  display: flex;
+  justify-content: center;
+  margin: 60px 20px;
+  background-image: url('../assest/image3.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.specialties-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fffdf7;
+  border: 2px solid #f6d100;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 1100px;
+  width: 100%;
+  gap: 25px;
+  text-align: center;
+}
+
+.specialties-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #F05522;
+  margin-bottom: 20px;
+}
+
+/* Tabs Container */
+.specialties-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+/* Tab Buttons */
+.specialty-tab {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg,#FFD700 , #F05522); /* Gradient orange-gold */
+  color: #fff;
+  border: none; /* Remove any default borders */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.specialty-tab:hover {
+  background: linear-gradient(135deg, #F05522,#FFD700); /* Reverse gradient on hover */
+  color: #fff; /* Keep text white */
+}
+
+/* Active tab */
+.specialty-tab.active {
+  background: #FFD700 ,#F05522; /* Solid orange for active tab */
+  color: #fff;
+}
+
+/* Specialties Content Layout */
+.specialties-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Specialties Image */
+.specialties-img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .specialties-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .specialties-img {
+    width: 90%;
+  }
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media (max-width: 900px) {
+  .about-card,
+  .highlights-card,
+  .specialties-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-card-img,
+  .highlights-card-img,
+  .specialties-img {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .specialties-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-card-img{
+    margin-left: 150px;
+
+  }
+}
+@media (max-width: 480px) {
+
+.about-hero .hero-content h1 {
+    color: #FFD700;
+    font-size: 2.0rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+  .about-card-img{
+    margin-left: 70px;
+    margin-bottom: -5px;
+
+  }
+}
+@media (max-width: 320px) {
+    .about-card-img{
+    margin-left: 50px;
+    margin-bottom: -5px;
+
+  }
+}
